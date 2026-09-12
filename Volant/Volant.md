@@ -1,1 +1,2 @@
-
+J'ai choisi de partir sur une base existante : https://www.printables.com/model/1236930-v2-xbox-series-xs-controller-racing-wheel-100-3d-p
+Ce modèle coute cependant 6$. Je n'ai personnellement pas réussi à le faire fonctionner directement avec la manette de Xbox, mais j'ai décidé d'utiliser un gyroscope (pour des questions de facilités d'installation). Je vais donc revoir le volant car je le trouve étonnamment complexe avec ces pièces vissées et collées. Étant donnée que je n'ai plus de manette, je vais concevoir une simple plaque.
