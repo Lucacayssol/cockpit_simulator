@@ -12,10 +12,10 @@ Joystick_ Joystick(
   false, false, false, false, false
 );
 
-const int pin = A0;
+const int potPin = A0;
 
 void setup() {
-  pinMode(pin, INPUT);
+  pinMode(potPin, INPUT);
 
   // Valeur de l'axe : 0 à 1023
   Joystick.setXAxisRange(0, 1023);
@@ -24,9 +24,9 @@ void setup() {
 }
 
 void loop() {
-  int valeur = analogRead(pin);
+  int valeur = analogRead(potPin);
   Serial.println(valeur);
-  valeur = map(valeur,415,665,0,1023);
+  valeur = map(valeur,410,605,0,1023);
   valeur = 1023 - valeur;
   valeur = constrain(valeur,0,1023);
   if (valeur > 462 and valeur < 562) {
