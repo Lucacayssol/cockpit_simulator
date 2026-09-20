@@ -2,3 +2,4 @@
 Actuellement, j'ai construit un HOTAS, une manette des gaz (throttle), et un Rudder.
 ## Flight Simulator
 Pour construire ces appareils, vous aurez globalement besoin d'Arduinos (Pro Micro conseillés, Leonardo possible) et de ressorts. Un lot de potentiomètre est aussi nécessaires. Vous aurez besoin d'autres pièces selon ce que vous voulez construire.
+### Throttle
