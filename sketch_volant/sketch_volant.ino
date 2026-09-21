@@ -9,7 +9,7 @@ int angle;
 
 float filteredAngle =0;        // valeur lissée (float pour précision du filtre)
 const float alpha = 0.35;       // 0.05 = très lisse mais lent, 0.5 = réactif mais moins lisse
-int centre_deadzone = 30;       //Deadzone centrale
+int centre_deadzone = 10;       //Deadzone centrale
 int lastSentAngle = 0;          // dernière valeur envoyée au joystick
 const int deadzone = 3;         // seuil en dessous duquel on ignore le changement
 
