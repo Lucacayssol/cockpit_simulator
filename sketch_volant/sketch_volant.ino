@@ -7,13 +7,15 @@ const int MPU_addr=0x68;  // I2C address of the MPU-6050
 int16_t AcX,AcY,AcZ,Tmp,GyX,GyY,GyZ;
 int angle;
 
-float filteredAngle = 0;        // valeur lissée (float pour précision du filtre)
-const float alpha = 0.15;       // 0.05 = très lisse mais lent, 0.5 = réactif mais moins lisse
+float filteredAngle =0;        // valeur lissée (float pour précision du filtre)
+const float alpha = 0.35;       // 0.05 = très lisse mais lent, 0.5 = réactif mais moins lisse
+int centre_deadzone = 30;       //Deadzone centrale
 int lastSentAngle = 0;          // dernière valeur envoyée au joystick
 const int deadzone = 3;         // seuil en dessous duquel on ignore le changement
 
 void setup(){
   pinMode(10,OUTPUT);
+  pinMode(9,INPUT);
   digitalWrite(10,HIGH);
   delay(3000);
   Wire.begin();
@@ -47,8 +49,15 @@ void loop(){
   // 2) Deadzone
   if (abs((int)filteredAngle - lastSentAngle) > deadzone) {
     lastSentAngle = (int)filteredAngle;
+    lastSentAngle = map(lastSentAngle,256,768,0,1023);
+    lastSentAngle = constrain(lastSentAngle,0,1023);
+    if (lastSentAngle>(512-centre_deadzone) and lastSentAngle<(512+centre_deadzone)){
+      lastSentAngle=512;
+    }
     Joystick.setXAxis(lastSentAngle);
   }
+
+  Joystick.setButton(1, analogRead(9));
 
   Serial.print("raw="); Serial.print(rawAngle);
   Serial.print(" | filtered="); Serial.print(filteredAngle);
