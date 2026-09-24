@@ -3,7 +3,7 @@ Actuellement, j'ai construit un HOTAS, une manette des gaz (throttle), et un Rud
 ## Simulation de vol
 Pour construire ces appareils, vous aurez globalement besoin d'Arduinos (Pro Micro conseillés, Leonardo possible) et de ressorts. Un lot de potentiomètre est aussi nécessaires. Vous aurez besoin d'autres pièces selon ce que vous voulez construire.
 ### HOTAS
-J'ai utilisé ce modèle : https://www.thingiverse.com/thing:4576634 en utilisant les plus gros roulement (17*6mm). Jai trouvé que coller les capteurs à effet Hall étaient un peu fastidieux. J'ai donc redessiné légèrement l'axe (dispo sous le nom "AxeC.3mf"). Concernant le code, je l'inclus aussi. J'ai rajouté une fonction : un appui long sur la gâchette change la deadzone. Particulièrement adapté pour changer entre Flight Simulator et Farming Simulator. Je n'ai par contre pas installé les quatre boutons du haut, ni ceux de la base
+J'ai utilisé ce modèle : https://www.thingiverse.com/thing:4576634 en utilisant les plus gros roulement (17*6mm). Jai trouvé que coller les capteurs à effet Hall étaient un peu fastidieux. J'ai donc redessiné légèrement l'axe (dispo sous le nom "AxeC.3mf"). Concernant le code, je l'inclus aussi. J'ai rajouté une fonction : un appui long sur la gâchette change la deadzone. Particulièrement adapté pour changer entre Flight Simulator et Farming Simulator. Je n'ai par contre pas installé les quatre boutons du haut, ni ceux de la base. Il y a un sketch conçu pour Ace Combat (7). Il faudra tout de même configurer x360ce pour fonctionner.
 ### Throttle
 Voici le modèle : https://www.thingiverse.com/thing:6994616
 J'ai ajoutés des plaques de chaque coté des engrenage pour augmenter le frottement ainsi qu'une vis entre le manche et l'engrenage pour limiter le jeu
